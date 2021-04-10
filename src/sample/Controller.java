@@ -1,11 +1,15 @@
 package sample;
-import com.sun.prism.paint.Color;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.ContextMenuEvent;
-import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Controller {
 
@@ -27,7 +31,7 @@ public class Controller {
 
     @FXML
     void background(MouseEvent event) {
-        btn1.setStyle("-fx-background-color:linear-gradient(to bottom ,#2f94de, #66a7eb, #73b7ec); -fx-border-radius: 9; -fx-background-radius: 9;");
+        btn1.setStyle("-fx-background-color:linear-gradient(to bottom ,#8dbefe, #a9ceff, #b8d6ff); -fx-border-radius: 9; -fx-background-radius: 9; -fx-text-fill: white");
 
     }
 
@@ -41,7 +45,7 @@ public class Controller {
     @FXML
     void background3(MouseEvent event) {
 
-        btn2.setStyle("-fx-background-color:linear-gradient(to bottom ,#2f94de, #66a7eb, #73b7ec); -fx-border-radius: 9; -fx-background-radius: 9;");
+        btn2.setStyle("-fx-background-color:linear-gradient(to bottom ,#8dbefe, #a9ceff, #b8d6ff); -fx-border-radius: 9; -fx-background-radius: 9; -fx-text-fill: white");
     }
 
     @FXML
@@ -54,7 +58,7 @@ public class Controller {
     @FXML
     void background5(MouseEvent event) {
 
-        btn3.setStyle("-fx-background-color:linear-gradient(to bottom ,#2f94de, #66a7eb, #73b7ec); -fx-border-radius: 9; -fx-background-radius: 9;");
+        btn3.setStyle("-fx-background-color:linear-gradient(to bottom ,#8dbefe, #a9ceff, #b8d6ff); -fx-border-radius: 9; -fx-background-radius: 9; -fx-text-fill: white");
     }
 
     @FXML
@@ -67,7 +71,7 @@ public class Controller {
     @FXML
     void background7(MouseEvent event) {
 
-        btn4.setStyle("-fx-background-color:linear-gradient(to bottom ,#2f94de, #66a7eb, #73b7ec); -fx-border-radius: 9; -fx-background-radius: 9;");
+        btn4.setStyle("-fx-background-color:linear-gradient(to bottom ,#8dbefe, #a9ceff, #b8d6ff); -fx-border-radius: 9; -fx-background-radius: 9; -fx-text-fill: white");
     }
 
     @FXML
@@ -81,13 +85,27 @@ public class Controller {
     @FXML
     void background9(MouseEvent event) {
 
-        btn5.setStyle("-fx-background-color:linear-gradient(to bottom ,#2f94de, #66a7eb, #73b7ec); -fx-border-radius: 9; -fx-background-radius: 9;");
+        btn5.setStyle("-fx-background-color:linear-gradient(to bottom ,#8dbefe, #a9ceff, #b8d6ff); -fx-border-radius: 9; -fx-background-radius: 9; -fx-text-fill: white;");
     }
 
     @FXML
     void background10(MouseEvent event) {
 
         btn5.setStyle("-fx-background-color:white; -fx-border-radius: 9; -fx-background-radius: 9;");
+    }
+
+    @FXML
+    void add_visitor(ActionEvent event)throws IOException {
+
+        Stage stage = (Stage) btn1.getScene().getWindow();
+        stage.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddVisitor1.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Другая форма");
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }
 

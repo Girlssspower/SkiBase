@@ -7,11 +7,14 @@ import javafx.scene.Scene;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.io.InputStream;
+
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Font font = Font.loadFont("sources/Raleway-VariableFont_wght.ttf", 45);
         primaryStage.setTitle("Hello World");
         primaryStage.setResizable(true);
         primaryStage.setScene(new Scene(root, 1600, 900));
