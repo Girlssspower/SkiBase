@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Controller {
+public class first_windowController {
 
 
     @FXML
@@ -28,6 +28,9 @@ public class Controller {
 
     @FXML
     private Button btn3;
+
+    @FXML
+    private Button btn6;
 
     @FXML
     void background(MouseEvent event) {
@@ -95,17 +98,44 @@ public class Controller {
     }
 
     @FXML
+    void background11(MouseEvent event) {
+
+        btn6.setStyle("-fx-background-color:linear-gradient(to bottom ,#8dbefe, #a9ceff, #b8d6ff); -fx-border-radius: 9; -fx-background-radius: 9; -fx-text-fill: white;");
+    }
+
+    @FXML
+    void background12(MouseEvent event) {
+
+        btn6.setStyle("-fx-background-color:white; -fx-border-radius: 9; -fx-background-radius: 9;");
+    }
+
+    @FXML
     void add_visitor(ActionEvent event)throws IOException {
 
         Stage stage = (Stage) btn1.getScene().getWindow();
         stage.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddVisitor1.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("add_visitor.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Другая форма");
+        stage.setTitle("Добавить нового посетителя");
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+
+    @FXML
+    void redact_visitor(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btn1.getScene().getWindow();
+        stage.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("redact_visitor.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Редактироать информацию о посетителе");
+        stage.setScene(new Scene(root));
+        stage.show();
+
     }
 }
 
