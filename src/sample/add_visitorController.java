@@ -1,8 +1,5 @@
 package sample;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,38 +11,39 @@ import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class add_visitorController {
-
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private Button back_to_main;
 
     @FXML
-    private Button add_new_visitor;
+    private Button add_new_visitor;  //функция add_new
 
     @FXML
-    private TextField Passport_visitor;
+    private TextField passport_visitor;  //passport_data_vis
 
     @FXML
-    private TextField surname_visitor;
+    private TextField surname_visitor;  //surname_vis
 
     @FXML
-    private TextField Name_visitor;
+    private TextField name_visitor;   //name_vis
 
     @FXML
-    private TextField phone_visitor;
+    private TextField phone_visitor;  //phone_number_vis
 
     @FXML
-    private TextField last_name_visitor;
+    private TextField otchestvo_visitor;  //second_name_vis
 
     @FXML
-    private DatePicker date_birth_visitor;
+    private DatePicker date_birth_visitor;  //birth_date_vis
+
+    @FXML
+    void add_new(ActionEvent event) {
+        //в поля вводится информация и эта информация добавляется в таблицу "visitors"
+
+    }
 
 
     public void go_main(ActionEvent actionEvent) throws IOException {
@@ -60,12 +58,6 @@ public class add_visitorController {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
-    @FXML
-    void add_new(ActionEvent event) {
-
-    }
-
 
 }
 

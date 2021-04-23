@@ -126,13 +126,72 @@ public class first_windowController {
 
     @FXML
     void redact_visitor(ActionEvent event) throws IOException {
-        Stage stage = (Stage) btn1.getScene().getWindow();
+        Stage stage = (Stage) btn2.getScene().getWindow();
         stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("redact_visitor.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Редактироать информацию о посетителе");
+        stage.setTitle("Редактировать информацию о посетителе");
+        stage.setScene(new Scene(root));
+        stage.show();
+
+    }
+
+
+    @FXML
+    void add_inventar(ActionEvent event) throws IOException  {
+        Stage stage = (Stage) btn3.getScene().getWindow();
+        stage.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("add_equipment.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Добавить новый инвентарь");
+        stage.setScene(new Scene(root));
+        stage.show();
+
+    }
+
+    @FXML
+    void redact_inventar(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btn4.getScene().getWindow();
+        stage.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("redact_equipment.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Редактировать информацию об инвентаре");
+        stage.setScene(new Scene(root));
+        stage.show();
+
+    }
+
+
+    @FXML
+    void add_prokat(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btn6.getScene().getWindow();
+        stage.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("add_prokat.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Добавить позицию в прокат снаряжения");
+        stage.setScene(new Scene(root));
+        stage.show();
+
+    }
+
+
+    @FXML
+    void make_otchet(ActionEvent event) throws IOException {
+        Stage stage = (Stage) btn5.getScene().getWindow();
+        stage.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("otchety.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Создать отчёт");
         stage.setScene(new Scene(root));
         stage.show();
 

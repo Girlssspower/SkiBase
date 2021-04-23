@@ -19,29 +19,40 @@ public class redact_visitorController {
     private Button back_to_main;
 
     @FXML
-    private Button edit;
+    private Button redact; //функция redact_visitor
 
     @FXML
-    private TextField Passport_visitor;
+    private Button find_visitor; //функция find_visitor_in_database
 
     @FXML
-    private TextField surname_visitor;
+    private TextField passport_visitor;  //passport_data_vis
 
     @FXML
-    private TextField Name_visitor;
+    private TextField surname_visitor;  //surname_vis
 
     @FXML
-    private TextField phone_visitor;
+    private TextField name_visitor;  //name_vis
 
     @FXML
-    private TextField last_name_visitor;
+    private TextField phone_visitor;  //phone_number_vis
 
     @FXML
-    private DatePicker date_birth_visitor;
+    private TextField otchestvo_visitor; //second_name_vis
 
     @FXML
-    void edit_vis(ActionEvent event) {
+    private DatePicker date_birth_visitor; //birth_date_vis
 
+
+    @FXML
+    void find_visitor_in_database(ActionEvent event) {
+        //челик вводит паспортные данные в поле, нажимает на кнопку со значком "поиск"
+        //и в поля подставляется подходящая информация из таблицы "visitors"
+
+    }
+
+    @FXML
+    void redact_visitor(ActionEvent event) {
+        //изменения из эдитов перезаписываются в таблицу "visitors"
     }
 
     @FXML
@@ -53,7 +64,7 @@ public class redact_visitorController {
         Parent root = (Parent) fxmlLoader.load();
         stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Другая форма");
+        stage.setTitle("Главная страница");
         stage.setScene(new Scene(root));
         stage.show();
 

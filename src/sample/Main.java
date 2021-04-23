@@ -11,7 +11,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("first_window.fxml"));
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("first_window.fxml"));
         Font font = Font.loadFont("sources/Raleway-VariableFont_wght.ttf", 45);
         primaryStage.setTitle("Главная страница");
         primaryStage.setResizable(true);

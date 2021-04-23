@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane hgap="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #dedede;" vgap="15.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.first_windowController">
+<GridPane hgap="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #dedede;" vgap="15.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.first_windowController">
   <columnConstraints>
     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="1.0" prefWidth="1.0" />
     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="1.0" prefWidth="1.0" />
@@ -43,7 +43,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button fx:id="btn5" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onMouseEntered="#background9" onMouseExited="#background10" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Создать отчёт" textAlignment="RIGHT" textFill="#2d2d2d" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <Button fx:id="btn5" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#make_otchet" onMouseEntered="#background9" onMouseExited="#background10" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Создать отчёт" textAlignment="RIGHT" textFill="#2d2d2d" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <padding>
             <Insets left="30.0" top="60.0" />
          </padding>
@@ -51,7 +51,7 @@
             <Font name="Arial Black" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btn4" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onMouseEntered="#background7" onMouseExited="#background8" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Редактировать&#10;информацию об инвентаре" textFill="#2d2d2d" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <Button fx:id="btn4" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#redact_inventar" onMouseEntered="#background7" onMouseExited="#background8" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Редактировать&#10;информацию об инвентаре" textFill="#2d2d2d" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <padding>
             <Insets left="20.0" top="60.0" />
          </padding>
@@ -62,7 +62,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button fx:id="btn3" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onMouseEntered="#background5" onMouseExited="#background6" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Добавить инвентарь" textAlignment="RIGHT" textFill="#2d2d2d" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <Button fx:id="btn3" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#add_inventar" onMouseEntered="#background5" onMouseExited="#background6" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Добавить инвентарь" textAlignment="RIGHT" textFill="#2d2d2d" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <padding>
             <Insets left="30.0" top="60.0" />
          </padding>
@@ -70,7 +70,7 @@
             <Font name="Arial Black" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btn6" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onMouseEntered="#background11" onMouseExited="#background12" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Добавить позицию&#10;в прокат снаряжения" GridPane.columnIndex="2">
+      <Button fx:id="btn6" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#add_prokat" onMouseEntered="#background11" onMouseExited="#background12" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Добавить позицию&#10;в прокат снаряжения" GridPane.columnIndex="2">
          <padding>
             <Insets left="20.0" top="60.0" />
          </padding>
