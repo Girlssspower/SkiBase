@@ -106,7 +106,7 @@
                   <Insets left="210.0" top="240.0" />
                </GridPane.margin>
             </ImageView>
-            <Label text="Введите только паспортные данные" textFill="#a3c7f8">
+            <Label text="Введите только код инвентаря" textFill="#a3c7f8">
                <font>
                   <Font name="System Italic" size="18.0" />
                </font>
