@@ -1,48 +1,61 @@
 package sample;
 
 import javafx.scene.control.Alert;
+import javafx.scene.control.DatePicker;
+
+import java.time.LocalDate;
 
 public class alert {
 
     public static void AlertAboutName() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Ошибочка вышла");
 
-        // Header Text: null
         alert.setHeaderText(null);
-        alert.setContentText("пошел нахуй, пиндос ебучий");
+        alert.setContentText("ФИО может быть введено только по-русски и не быть пустым.");
 
         alert.showAndWait();
     }
 
     public static void AlertAboutPhone() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Ошибочка вышла");
 
-        // Header Text: null
         alert.setHeaderText(null);
-        alert.setContentText("Телефон эт цифры, ес чо, умник");
+        alert.setContentText("Телефон должен быть введён только 11ю цифрами и не быть пустым.");
+
+        alert.showAndWait();
+    }
+
+    public static void AlertAboutPassport() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        alert.setHeaderText(null);
+        alert.setContentText("Паспортные данные должены быть введёны только 10ю цифрами и не быть пустыми.");
+
+        alert.showAndWait();
+    }
+    public static void AlertAboutAge() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        alert.setHeaderText(null);
+        alert.setContentText("Возраст должен быть больше 16 лет и не быть пустым.");
 
         alert.showAndWait();
     }
 
     public static void Sucsess() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Ну неужели");
 
         // Header Text: null
         alert.setHeaderText(null);
-        alert.setContentText("В базу добавлено");
+        alert.setContentText("Информация занесена в базу данных.");
 
         alert.showAndWait();
     }
     public static void alreadyExist() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Атата");
 
-        // Header Text: null
         alert.setHeaderText(null);
-        alert.setContentText("Такие паспортные данные уже имеются");
+        alert.setContentText("Такой паспорт уже есть в базе данных.");
 
         alert.showAndWait();
     }
@@ -52,7 +65,7 @@ public class alert {
 
         // Header Text: null
         alert.setHeaderText(null);
-        alert.setContentText("База данных затерялась во тьме");
+        alert.setContentText("База данных не найдена");
 
         alert.showAndWait();
     }
@@ -63,7 +76,7 @@ public class alert {
 
         // Header Text: null
         alert.setHeaderText(null);
-        alert.setContentText(add_visitorController.passport_visitor.getText());
+        alert.setContentText(String.valueOf(LocalDate.now()));
 
         alert.showAndWait();
     }

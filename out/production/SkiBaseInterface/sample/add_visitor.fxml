@@ -70,7 +70,7 @@
                 <Insets bottom="220.0" left="400.0" right="400.0" top="350.0" />
             </GridPane.margin>
             <children>
-                <TextField fx:id="passport_visitor" prefHeight="40.0" prefWidth="250.0" promptText="2816765432" GridPane.valignment="BOTTOM" />
+                <TextField fx:id="passport_visitor" prefHeight="40.0" prefWidth="250.0" promptText="2816765432" GridPane.valignment="BOTTOM" accessibleText=""/>
                 <TextField fx:id="surname_visitor" prefHeight="40.0" prefWidth="250.0" promptText="Иванов" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
                 <TextField fx:id="name_visitor" prefHeight="40.0" prefWidth="250.0" promptText="Иван" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
                 <TextField fx:id="phone_visitor" prefHeight="40.0" prefWidth="250.0" promptText="89121120975" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
