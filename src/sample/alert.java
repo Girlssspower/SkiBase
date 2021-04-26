@@ -69,6 +69,45 @@ public class alert {
 
         alert.showAndWait();
     }
+    public static void inventarCode() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        // Header Text: null
+        alert.setHeaderText(null);
+        alert.setContentText("Код инвентаря может содержать только цифры и не должен быть пустым.");
+
+        alert.showAndWait();
+    }
+
+    public static void inventarName() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        // Header Text: null
+        alert.setHeaderText(null);
+        alert.setContentText("Наименование инвентаря может быть не больше 20ти символов и не должно быть пустым.");
+
+        alert.showAndWait();
+    }
+
+    public static void inventarPrice() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        // Header Text: null
+        alert.setHeaderText(null);
+        alert.setContentText("Цена инвентаря должна быть записана цифрами.");
+
+        alert.showAndWait();
+    }
+
+    public static void inventarDouble() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        // Header Text: null
+        alert.setHeaderText(null);
+        alert.setContentText("Такой номер инвентаря уже есть в базе данных.");
+
+        alert.showAndWait();
+    }
 
     public static void whatsThere() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

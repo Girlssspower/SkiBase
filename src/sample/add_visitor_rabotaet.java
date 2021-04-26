@@ -60,7 +60,7 @@ public class add_visitor_rabotaet {
                                     //записываем имя, фамилию, отчество, почту, группу в visitors
                                     statement.executeUpdate("insert into visitors VALUES (" + passport_visitor.getText() + ",'" + surname_visitor.getText() + "', '" + name_visitor.getText() + "', '" + otchestvo_visitor.getText() + "', '" + date_birth_visitor.getValue() + "' ," + phone_visitor.getText() + ")");
                                     alert.Sucsess();
-                                    
+
 
                                 }
                             }

@@ -32,6 +32,7 @@ public class add_equipmentController {
     @FXML
     void add_in_inventar(ActionEvent event) {
     //в поля вводится информация и эта информация добавляется в таблицу "equipment"
+        add_inventar_rabotaet.rabotaet(inventar_code, name_inventar, count_inventar);
     }
 
     @FXML
