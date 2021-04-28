@@ -109,6 +109,36 @@ public class alert {
         alert.showAndWait();
     }
 
+    public static void SucsessEdit() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        // Header Text: null
+        alert.setHeaderText(null);
+        alert.setContentText("Информация в базе данных обновлена.");
+
+        alert.showAndWait();
+    }
+
+    public static void noNumber() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        // Header Text: null
+        alert.setHeaderText(null);
+        alert.setContentText("Такого номера инвентаря нет в базе данных.");
+
+        alert.showAndWait();
+    }
+
+    public static void noVisitor() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+        // Header Text: null
+        alert.setHeaderText(null);
+        alert.setContentText("Такого номера паспорта нет в базе данных.");
+
+        alert.showAndWait();
+    }
+
     public static void whatsThere() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("о");

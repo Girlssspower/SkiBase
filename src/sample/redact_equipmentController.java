@@ -36,6 +36,8 @@ public class redact_equipmentController {
     void redact_inventar(ActionEvent event) {
         //изменения из эдитов перезаписываются в таблицу "equipment"
 
+        redact_invebtar_rabotaet.rabotaet(inventar_code, name_inventar, cost_inventar);
+
     }
 
     @FXML
@@ -43,6 +45,8 @@ public class redact_equipmentController {
         //челик вводит номер инвентаря в поле, нажимает на кнопку со значком "поиск"
         //и в поля подставляется подходящая информация из таблицы "equipment"
         // из name(БД)->в name_inventar(Edit), из cost_per_hour(БД)->в cost_inventar(Edit)
+
+        find_inventar_rabotaet.rabotaet(inventar_code, name_inventar, cost_inventar);
 
     }
 

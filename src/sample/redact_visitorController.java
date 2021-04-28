@@ -47,12 +47,14 @@ public class redact_visitorController {
     void find_visitor_in_database(ActionEvent event) {
         //челик вводит паспортные данные в поле, нажимает на кнопку со значком "поиск"
         //и в поля подставляется подходящая информация из таблицы "visitors"
+        find_visitor_rabotaet.rabotaet(passport_visitor, surname_visitor, name_visitor, phone_visitor,  otchestvo_visitor, date_birth_visitor);
 
     }
 
     @FXML
     void redact_visitor(ActionEvent event) {
         //изменения из эдитов перезаписываются в таблицу "visitors"
+        redact_visitor_rabotaet.rabotaet(passport_visitor, surname_visitor, name_visitor, phone_visitor,  otchestvo_visitor, date_birth_visitor);
     }
 
     @FXML

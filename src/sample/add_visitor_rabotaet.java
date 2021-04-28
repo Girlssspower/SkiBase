@@ -36,7 +36,7 @@ public class add_visitor_rabotaet {
             }}
 
             if (matching == 0) {
-                    if (surname_visitor.getText().matches("^[a-zA-Z]*$") || name_visitor.getText().matches("^[a-zA-Z]*$") || otchestvo_visitor.getText().matches("^[a-zA-Z]*$")) {
+                    if (surname_visitor.getText().matches("^[a-zA-Z0-9]*$") || name_visitor.getText().matches("^[a-zA-Z0-9]*$") || otchestvo_visitor.getText().matches("^[a-zA-Z0-9]*$")) {
                         alert.AlertAboutName(); //Имя фамилия отчество только русскими буквами
 //
                     } else {
