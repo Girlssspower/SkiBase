@@ -14,7 +14,7 @@ public class find_visitor_rabotaet {
     public static void rabotaet(TextField passport_visitor, TextField surname_visitor, TextField name_visitor, TextField phone_visitor, TextField otchestvo_visitor, DatePicker date_birth_visitor) {
         try (Connection conn = DriverManager.getConnection(add_visitor_rabotaet.url, add_visitor_rabotaet.root, add_visitor_rabotaet.password)) { //подключаемся к бд
             Statement statement = conn.createStatement(); //штука, которая обрабатывает запросы sql
-            ResultSet resultSet = statement.executeQuery("SELECT * from visitors WHERE passport_data_vis=" + BigInteger.valueOf(Long.parseLong(passport_visitor.getText().trim()))); //коробка с данными из базы
+            ResultSet resultSet = statement.executeQuery("SELECT * from visitors WHERE passport_data_vis=" + passport_visitor.getText().trim()); //коробка с данными из базы
             if (!resultSet.next()) alert.noVisitor();
             else {
                 surname_visitor.setText(resultSet.getString(2));
