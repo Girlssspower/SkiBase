@@ -1,8 +1,11 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -10,8 +13,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.sql.*;
+import java.util.ResourceBundle;
 
-public class add_prokatController {
+public class add_prokatController implements Initializable {
 
     @FXML
     private Button back_to_main;
@@ -35,13 +41,38 @@ public class add_prokatController {
     private DatePicker date_deal;  //date_deal
 
     @FXML
-    private ComboBox<?> inventar_code; //нужно, чтобы выпадали значения из таблицы "equipment" из столбца "equipment_number"
+    private ComboBox<String> inventar_code; //выпадают значения из таблицы "equipment" из столбца "equipment_number"
+                                            //через метод initialize
 
     @FXML
     private Label sum;  //cost
     //выводится произведение столбца "cost_per_hour" из таблицы "equipment"
     // на столбец "quantity_taken_equipment" из таблицы "rental_equipment"
     // и еще на столбец "time" из таблицы "rental_equipment"
+
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ObservableList<String> inventoryList = FXCollections.observableArrayList();
+        try (Connection conn = DriverManager.getConnection (
+                add_visitor_rabotaet.url,
+                add_visitor_rabotaet.root,
+                add_visitor_rabotaet.password)) {
+
+            Statement statement = conn.createStatement();
+            ResultSet resultset = statement.executeQuery ("select * from equipment");
+            while (resultset.next()) {
+                inventoryList.add(resultset.getString(2));
+            }
+        }
+        catch (SQLException throwables) {
+            alert.DatabaseFail(); //если не получилось подключиться, держим в курсе
+            throwables.printStackTrace();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+        inventar_code.setItems(inventoryList);
+    }
 
     @FXML
     void add_in_prokat(ActionEvent event) {

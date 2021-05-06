@@ -11,6 +11,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
         Parent root;
         root = FXMLLoader.load(getClass().getResource("first_window.fxml"));
         Font font = Font.loadFont("sources/Raleway-VariableFont_wght.ttf", 45);
