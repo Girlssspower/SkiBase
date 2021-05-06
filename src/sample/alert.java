@@ -9,7 +9,7 @@ public class alert {
 
     public static void AlertAboutName() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("ФИО может быть введено только по-русски и не быть пустым.");
 
@@ -18,7 +18,7 @@ public class alert {
 
     public static void AlertAboutPhone() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Телефон должен быть введён только 11ю цифрами и не быть пустым.");
 
@@ -27,7 +27,7 @@ public class alert {
 
     public static void AlertAboutPassport() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Паспортные данные должены быть введёны только 10ю цифрами и не быть пустыми.");
 
@@ -35,7 +35,7 @@ public class alert {
     }
     public static void AlertAboutAge() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Возраст должен быть больше 16 лет и не быть пустым.");
 
@@ -45,7 +45,7 @@ public class alert {
     public static void Sucsess() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
 
-        // Header Text: null
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Информация занесена в базу данных.");
 
@@ -53,7 +53,7 @@ public class alert {
     }
     public static void alreadyExist() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Такой паспорт уже есть в базе данных.");
 
@@ -62,8 +62,7 @@ public class alert {
     public static void DatabaseFail() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("А где");
-
-        // Header Text: null
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("База данных не найдена");
 
@@ -71,8 +70,7 @@ public class alert {
     }
     public static void inventarCode() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
-        // Header Text: null
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Код инвентаря может содержать только цифры и не должен быть пустым.");
 
@@ -81,8 +79,7 @@ public class alert {
 
     public static void inventarName() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
-        // Header Text: null
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Наименование инвентаря может быть не больше 20ти символов и не должно быть пустым.");
 
@@ -91,18 +88,16 @@ public class alert {
 
     public static void inventarPrice() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
-        // Header Text: null
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("Цена инвентаря должна быть записана цифрами.");
+        alert.setContentText("Цена инвентаря должна быть записана цифрами и быть не больше 2000 рублей.");
 
         alert.showAndWait();
     }
 
     public static void inventarDouble() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
-        // Header Text: null
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Такой номер инвентаря уже есть в базе данных.");
 
@@ -111,8 +106,7 @@ public class alert {
 
     public static void SucsessEdit() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
-        // Header Text: null
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Информация в базе данных обновлена.");
 
@@ -121,8 +115,7 @@ public class alert {
 
     public static void noNumber() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
-        // Header Text: null
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Такого номера инвентаря нет в базе данных.");
 
@@ -131,10 +124,50 @@ public class alert {
 
     public static void noVisitor() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
-        // Header Text: null
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText("Такого номера паспорта нет в базе данных.");
+
+        alert.showAndWait();
+    }
+
+    public static void wrongKolvoInv() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Сообщение");
+        alert.setHeaderText(null);
+        alert.setContentText("Количество инвентаря должно быть введено арабскими цифрами и не быть пустым.");
+
+        alert.showAndWait();
+    }
+    public static void wrongKolvoHours() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Сообщение");
+        alert.setHeaderText(null);
+        alert.setContentText("Количество часов должно быть введено арабскими цифрами и не быть пустым.");
+
+        alert.showAndWait();
+    }
+    public static void selectVisitor() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Сообщение");
+        alert.setHeaderText(null);
+        alert.setContentText("Выберите паспортные данные посетителя.");
+
+        alert.showAndWait();
+    }
+    public static void selectEmployee() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Сообщение");
+        alert.setHeaderText(null);
+        alert.setContentText("Выберите паспортные данные работника.");
+
+        alert.showAndWait();
+    }
+    public static void selectInventar() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Сообщение");
+        alert.setHeaderText(null);
+        alert.setContentText("Выберите инвентарь.");
 
         alert.showAndWait();
     }
@@ -142,8 +175,7 @@ public class alert {
     public static void whatsThere() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("о");
-
-        // Header Text: null
+        alert.setTitle("Сообщение");
         alert.setHeaderText(null);
         alert.setContentText(String.valueOf(LocalDate.now()));
 

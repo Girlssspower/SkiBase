@@ -35,7 +35,7 @@ public class add_inventar_rabotaet {
                         if (name_inventar.getText().trim().length()>20 || name_inventar.getText().trim().length()==0) {alert.inventarName();}
                         //имя инвентаря не должно быть длиннее 20ти символов
                         else {
-                            if (count_inventar.getText().trim().matches("^[a-zA-Zа-яА-Я]*$")) {alert.inventarPrice();}
+                            if (count_inventar.getText().trim().matches("^[a-zA-Zа-яА-Я]*$") || Integer.parseInt(count_inventar.getText().trim())>2000) {alert.inventarPrice();}
                             //цена должна быть в цифрах
                             else {
 
