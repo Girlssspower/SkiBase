@@ -41,25 +41,23 @@ public class otchetyController {
 
     @FXML
     void otchet_inventar(ActionEvent event) {
+        otchety_inventar.inventar();
         //выведение из таблицы "rental_equipment" столбцов "date_deal", "equipment_number" и "quantity_taken_equipment"
-        //в вордик :) (если не сильно запарно)
-
+        //в excel
         //с заголовками таблицы "дата проката", "номер инвентаря" и "количество взятого инвентаря"
 
     }
 
     @FXML
-    void otchet_money(ActionEvent event) {
-        //выведение из таблицы "rental_equipment" столбцов "date_deal" и "cost" в вордик :) (если не сильно запарно)
-        //с заголовками таблицы "дата проката" и "денежное поступление"
-
-        //и если получиться, то посчиать сумму столбца "cost" и тоже вывести ее в ворд
+    void otchet_money(ActionEvent event) { otchety_money.money();
+        //выведение из таблицы "rental_equipment" столбцов "date_deal" и "cost" в excel
+        //с заголовками таблицы "дата проката" и "денежное поступление", посчитана сумму столбца "cost"
 
     }
 
     @FXML
-    void otchet_visitors(ActionEvent event) {
-        //выведение из таблицы "rental_equipment" столбцов "date_deal", "passport_data_vis" в вордик :) (если не сильно запарно)
+    void otchet_visitors(ActionEvent event) { otchet_visitors.visitors();
+        //выведение из таблицы "rental_equipment" столбцов "date_deal", "passport_data_vis" в excel
         //с заголовками таблицы "дата проката" и "паспортные данные посетителя"
 
     }

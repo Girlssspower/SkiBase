@@ -171,6 +171,31 @@ public class alert {
 
         alert.showAndWait();
     }
+    public static void otchetInventar() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Сообщение");
+        alert.setHeaderText(null);
+        alert.setContentText("Отчёт о инвентаре готов в C:/Отчёты/Эксплутируемый инвентарь.xsl");
+
+        alert.showAndWait();
+    }
+    public static void otchetMoney() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Сообщение");
+        alert.setHeaderText(null);
+        alert.setContentText("Отчёт о инвентаре готов в C:/Отчёты/Денежные поступления.xsl");
+
+        alert.showAndWait();
+    }
+    public static void otchetVisitors() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Сообщение");
+        alert.setHeaderText(null);
+        alert.setContentText("Отчёт о инвентаре готов в C:/Отчёты/Количество посетителей.xsl");
+
+        alert.showAndWait();
+    }
+
 
     public static void whatsThere() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
