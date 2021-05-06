@@ -2,13 +2,12 @@ create database skibase;
 use skibase;
 create table employees (passport_data_em bigint not null, surname_em varchar(20) not null,
 name_em varchar(20) not null, second_name_em varchar(20) not null,  position varchar(30) not null, birth_date_em date not null, phone_number_em bigint not null);
-create table rental_equipment (operation_number int not null, equipment_number int not null, 
-passport_data_vis bigint not null, quantity_taken_equipment int not null, time int not null, cost int not null, passport_data_em bigint not null, date_deal date not null);
+create table rental_equipment (operation_number int AUTO_INCREMENT, equipment_number int not null,
+passport_data_vis bigint not null, quantity_taken_equipment int not null, time int not null, cost int not null, passport_data_em bigint not null, date_deal date not null, primary key (operation_number));
 create table visitors (passport_data_vis bigint not null, surname_vis varchar(20) not null, name_vis varchar(20) not null, second_name_vis varchar(20) not null,
 birth_date_vis date not null, phone_number_vis bigint not null);
 create table equipment (equipment_number int not null, name varchar(20) not null, cost_per_hour int not null);
 alter table employees add primary key (passport_data_em);
-alter table rental_equipment add primary key (operation_number);
 alter table visitors add primary key (passport_data_vis);
 alter table equipment add primary key (equipment_number);
 alter table rental_equipment add foreign key (passport_data_em) references employees(passport_data_em);
