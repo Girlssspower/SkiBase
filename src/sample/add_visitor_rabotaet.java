@@ -4,6 +4,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 
+import java.math.BigInteger;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -21,16 +22,16 @@ public class add_visitor_rabotaet {
             Statement statement = conn.createStatement(); //штука, которая обрабатывает запросы sql
             ResultSet resultSet = statement.executeQuery("SELECT * from visitors"); //коробка с данными из базы
             int matching = 0;
-            int passportdata = 0;
+            long passportdata = 0;
             if (passport_visitor.getText().trim().matches("^[a-zA-Zа-яА-Я]*$") || !passport_visitor.getText().trim().matches("^[0-9]*$") || passport_visitor.getText().trim().length()!=10) { //паспортные данные только цифры
                 alert.AlertAboutPassport();
                 matching=2;
             } else {
             while (resultSet.next()) {//пока в коробке есть данные
-                passportdata=resultSet.getInt(1);
+                passportdata=resultSet.getLong(1);
                 //берём данные из первой строки первого столбца
 
-                if (Objects.equals(passportdata, Integer.parseInt(passport_visitor.getText().trim()))) {
+                if (Objects.equals(passportdata, BigInteger.valueOf(Long.parseLong(passport_visitor.getText().trim())))) {
                     matching = 1;
                 }  //сравниваем с тем, что введено
             }}
@@ -50,7 +51,6 @@ public class add_visitor_rabotaet {
                                 String[] splitGiven = String.valueOf(date_birth_visitor.getValue()).split("-"); //делим по разделителю дату рождения
 
                                 if (Integer.parseInt(splitDate[0]) - Integer.parseInt(splitGiven[0]) < 16 || //если на данный момент возраст меньше 16 лет
-                                        Integer.parseInt(splitDate[1]) - Integer.parseInt(splitGiven[1]) < 0 ||
                                         (Integer.parseInt(splitDate[0]) - Integer.parseInt(splitGiven[0]) == 16 &&
                                                 Integer.parseInt(splitDate[1]) - Integer.parseInt(splitGiven[1]) == 0 &&
                                                 Integer.parseInt(splitDate[2]) - Integer.parseInt(splitGiven[2]) < 0)) {

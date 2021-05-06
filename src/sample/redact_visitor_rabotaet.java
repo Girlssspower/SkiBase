@@ -31,7 +31,6 @@ public class redact_visitor_rabotaet {
                         String[] splitGiven = String.valueOf(date_birth_visitor.getValue()).split("-"); //делим по разделителю дату рождения
 
                         if (Integer.parseInt(splitDate[0]) - Integer.parseInt(splitGiven[0]) < 16 || //если на данный момент возраст меньше 16 лет
-                                Integer.parseInt(splitDate[1]) - Integer.parseInt(splitGiven[1]) < 0 ||
                                 (Integer.parseInt(splitDate[0]) - Integer.parseInt(splitGiven[0]) == 16 &&
                                         Integer.parseInt(splitDate[1]) - Integer.parseInt(splitGiven[1]) == 0 &&
                                         Integer.parseInt(splitDate[2]) - Integer.parseInt(splitGiven[2]) < 0)) {
