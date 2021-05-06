@@ -25,14 +25,15 @@ public class add_prokatController implements Initializable {
     @FXML
     private Button add_position; //add_in_prokat
 
-    @FXML
-    private TextField passport_visitor;  //passport_data_vis
 
     @FXML
     private TextField kolvo_inventar;  //quantity_taken_equipment
 
     @FXML
-    private TextField passport_sotrud;  //passport_data_em
+    private ComboBox<?> passport_visitor;
+
+    @FXML
+    private ComboBox<?> passport_sotrud;
 
     @FXML
     private TextField kolvo_hours;  //time

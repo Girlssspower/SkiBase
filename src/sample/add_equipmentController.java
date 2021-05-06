@@ -48,6 +48,7 @@ public class add_equipmentController {
         stage.setScene(new Scene(root));
         stage.show();
 
+
     }
 
 }
