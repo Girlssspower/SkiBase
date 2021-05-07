@@ -52,7 +52,7 @@ public class add_visitorController {
     void add_new(ActionEvent event) {
         //в поля вводится информация и эта информация добавляется в таблицу "visitors"
 
-             add_visitor_rabotaet.add_visitor_rabotaet(passport_visitor, surname_visitor, name_visitor, otchestvo_visitor, phone_visitor, date_birth_visitor);
+           add_visitor_rabotaet.add_visitor_rabotaet(passport_visitor, surname_visitor, name_visitor, otchestvo_visitor, phone_visitor, date_birth_visitor);
 
 
     }
