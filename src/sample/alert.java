@@ -197,12 +197,12 @@ public class alert {
     }
 
 
-    public static void whatsThere() {
+    public static void whatsThere(DatePicker date_birth_visitor) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("о");
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText(String.valueOf(LocalDate.now()));
+        alert.setContentText(String.valueOf(date_birth_visitor.getEditor().getText()));
 
         alert.showAndWait();
     }

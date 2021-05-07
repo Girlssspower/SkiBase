@@ -44,22 +44,27 @@ public class add_visitor_rabotaet {
                         if (phone_visitor.getText().matches("^[a-zA-Zа-яА-Я]*$") || !phone_visitor.getText().trim().matches("^[0-9]*$") || phone_visitor.getText().trim().length()!=11) {
                             alert.AlertAboutPhone(); //телефон только цифрами
                         } else {
-                            if (!String.valueOf(date_birth_visitor.getValue()).matches("^[0-9-]*$")) {alert.AlertAboutAge(); //дата рождения не должна быть пустой
+                            if (!String.valueOf(date_birth_visitor.getEditor().getText()).matches("^[0-9.]*$")) {alert.AlertAboutAge(); //дата рождения не должна быть пустой
                             } else {
                                 LocalDate localDate = LocalDate.now(); //время сейчас
                                 String[] splitDate = String.valueOf(localDate).split("-"); //делим по разделителю время сейчас
-                                String[] splitGiven = String.valueOf(date_birth_visitor.getValue()).split("-"); //делим по разделителю дату рождения
+                                String[] splitGiven = date_birth_visitor.getEditor().getText().split("\\."); //делим по разделителю дату рождения
 
-                                if (Integer.parseInt(splitDate[0]) - Integer.parseInt(splitGiven[0]) < 16 || //если на данный момент возраст меньше 16 лет
-                                        (Integer.parseInt(splitDate[0]) - Integer.parseInt(splitGiven[0]) == 16 &&
+                                if (Integer.parseInt(splitDate[0]) - Integer.parseInt(splitGiven[2]) < 16 || //если на данный момент возраст меньше 16 лет
+                                        (Integer.parseInt(splitDate[0]) - Integer.parseInt(splitGiven[2]) == 16 &&
                                                 Integer.parseInt(splitDate[1]) - Integer.parseInt(splitGiven[1]) == 0 &&
-                                                Integer.parseInt(splitDate[2]) - Integer.parseInt(splitGiven[2]) < 0)) {
+                                                Integer.parseInt(splitDate[2]) - Integer.parseInt(splitGiven[0]) < 0)) {
                                     alert.AlertAboutAge();
                                 } else {
 
 
                                     //записываем имя, фамилию, отчество, почту, группу в visitors
-                                    statement.executeUpdate("insert into visitors VALUES (" + passport_visitor.getText() + ",'" + surname_visitor.getText() + "', '" + name_visitor.getText() + "', '" + otchestvo_visitor.getText() + "', '" + date_birth_visitor.getValue() + "' ," + phone_visitor.getText() + ")");
+                                    statement.executeUpdate("insert into visitors VALUES (" + passport_visitor.getText() + ",'"
+                                            + surname_visitor.getText() + "', '"
+                                            + name_visitor.getText() + "', '"
+                                            + otchestvo_visitor.getText() + "', '"
+                                            + splitGiven[2] +"-" +splitGiven[1] +"-" + splitGiven[0] + "' ,"
+                                            + phone_visitor.getText() + ")");
                                     alert.Sucsess();
 
 
