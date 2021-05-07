@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -22,6 +23,9 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class add_prokatController implements Initializable {
+
+    @FXML
+    private GridPane pane;
 
     @FXML
     private Button back_to_main;

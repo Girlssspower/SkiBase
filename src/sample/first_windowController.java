@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -16,7 +17,8 @@ import java.io.IOException;
 import java.sql.*;
 
 public class first_windowController {
-
+    @FXML
+    private GridPane pane;
 
     @FXML
     private Button btn1;

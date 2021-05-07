@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -20,7 +21,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class add_visitorController {
-
+    @FXML
+    private GridPane pane;
 
     @FXML
     private Button back_to_main;
