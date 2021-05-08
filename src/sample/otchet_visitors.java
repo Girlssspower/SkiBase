@@ -34,7 +34,7 @@ public class otchet_visitors {
 
                 Row rowNext=sheet.createRow(sheet.getLastRowNum()+1); //создаём новую строку, прибавляя к индексу последней 1
                 rowNext.createCell(0).setCellValue(String.valueOf(resultSet.getDate(8))); //создаём ячейки
-                rowNext.createCell(1).setCellValue(resultSet.getInt(3));
+                rowNext.createCell(1).setCellValue(resultSet.getLong(3));
 
             }
 
