@@ -1,0 +1,75 @@
+create database skibase;
+
+use skibase;
+
+create table employees (passport_data_em bigint not null, surname_em varchar(30) not null,
+name_em varchar(30) not null, second_name_em varchar(30) not null,  position varchar(40) not null, birth_date_em date not null, phone_number_em bigint not null);
+
+create table rental_equipment (operation_number int AUTO_INCREMENT, equipment_number int not null,
+passport_data_vis bigint not null, quantity_taken_equipment int not null, time int not null, cost int not null, passport_data_em bigint not null, date_deal date not null, primary key (operation_number));
+
+create table visitors (passport_data_vis bigint not null, surname_vis varchar(30) not null, name_vis varchar(30) not null, second_name_vis varchar(30) not null,
+birth_date_vis date not null, phone_number_vis bigint not null);
+
+create table equipment (equipment_number int not null, name varchar(20) not null, cost_per_hour int not null);
+
+alter table employees add primary key (passport_data_em);
+
+alter table visitors add primary key (passport_data_vis);
+
+alter table equipment add primary key (equipment_number);
+
+alter table rental_equipment add foreign key (passport_data_em) references employees(passport_data_em);
+
+alter table rental_equipment add foreign key (passport_data_vis) references visitors(passport_data_vis);
+
+alter table rental_equipment add foreign key (equipment_number) references equipment(equipment_number);
+
+insert into employees values ('5432789456','Иванов', 'Иван', 'Иванович', 'Приёмщик пункта проката', '2000-02-07', '89607123467');
+insert into employees values ('7657890654','Абрамова', 'Анастасия', 'Романовна', 'Приёмщик пункта проката', '1999-07-01', '89049005671'); 
+insert into employees values ('2567549087','Александров', 'Денис', 'Максимович', 'Приёмщик пункта проката', '1996-10-15', '89199176347'); 
+insert into employees values ('8765090561','Половцев', 'Кирилл', 'Егорович', 'Приёмщик пункта проката', '2001-03-01', '89128765490'); 
+insert into employees values ('8709342123','Кутичева', 'Зоя', 'Ивановна', 'Менеджер', '2000-01-19', '89199878373'); 
+insert into employees values ('9876512045','Аюшиева', 'Ксения', 'Андреевна', 'Приёмщик пункта проката', '2001-04-13', '89106561959'); 
+insert into employees values ('7357152475','Алексеев', 'Андрей', 'Артёмович', 'Менеджер', '1999-06-20', '89607199179'); 
+insert into employees values ('8721723950','Алексеев', 'Глеб', 'Андреевич', 'Приёмщик пункта проката', '2001-12-17', '89123422198'); 
+insert into employees values ('9376912743','Кузнецов', 'Дмитрий', 'Николаевич', 'Менеджер', '1998-05-30', '89045689011'); 
+insert into employees values ('5481790654','Кудрявцева', 'Анна', 'Дмитриевна', 'Приёмщик пункта проката', '2001-10-19', '89127856488'); 
+
+insert into visitors values ('4779908926','Михайлова', 'Виктория', 'Дмитриевна', '1976-07-02', '89657436579');
+insert into visitors values ('4119526523','Павлов', 'Александр', 'Валерьевич', '1991-10-05', '89123547890'); 
+insert into visitors values ('9519633619','Краснов', 'Алексей', 'Николаевич', '1989-05-31', '89607548012'); 
+insert into visitors values ('4949678895','Виноградова', 'Мария', 'Михайловна', '1995-01-15', '89191175643'); 
+insert into visitors values ('5664244611','Осипова', 'Алия', 'Романовна', '2000-03-09', '89048349032'); 
+insert into visitors values ('4644703642','Пономарёв', 'Максим', 'Викторович', '2002-11-14', '89657835926'); 
+insert into visitors values ('7654498442','Семёнов', 'Никита', 'Игоревич', '1985-12-19', '89607812360'); 
+insert into visitors values ('8572398195','Тарасова', 'Маргарита', 'Николаевна', '1999-02-02', '89040915341'); 
+insert into visitors values ('1731191401','Нефёдов', 'Лев', 'Максимович', '1979-01-08', '89123087380'); 
+insert into visitors values ('5064877124','Лазарев', 'Михаил', 'Денисович', '1991-06-07', '89198367205'); 
+
+insert into equipment values ('111','Лыжи', '300');
+insert into equipment values ('112','Лыжные палки', '200'); 
+insert into equipment values ('113','Лыжные ботинки', '300'); 
+insert into equipment values ('114','Сноуборд', '600'); 
+insert into equipment values ('221','Снегокат', '550'); 
+insert into equipment values ('222','Тюбинг', '450'); 
+insert into equipment values ('223','Ледянка', '150'); 
+insert into equipment values ('331','Коньки', '400'); 
+insert into equipment values ('332','Клюшка и шайба', '200'); 
+insert into equipment values ('441','Снежколеп', '100'); 
+
+insert into rental_equipment (equipment_number, passport_data_vis, quantity_taken_equipment, time, cost, passport_data_em, date_deal) values ('111', '4779908926', '1', '2', '600', '5432789456', '2021-01-03');
+insert into rental_equipment (equipment_number, passport_data_vis, quantity_taken_equipment, time, cost, passport_data_em, date_deal) values ('112', '4119526523', '1', '2', '400', '7657890654', '2021-12-20'); 
+insert into rental_equipment (equipment_number, passport_data_vis, quantity_taken_equipment, time, cost, passport_data_em, date_deal) values ('113', '9519633619', '2', '2', '1200', '2567549087', '2021-02-03'); 
+insert into rental_equipment (equipment_number, passport_data_vis, quantity_taken_equipment, time, cost, passport_data_em, date_deal) values ('114', '4949678895', '3', '2', '3600', '8765090561', '2021-01-05'); 
+insert into rental_equipment (equipment_number, passport_data_vis, quantity_taken_equipment, time, cost, passport_data_em, date_deal) values ('221', '5664244611', '1', '1', '550', '8709342123', '2021-12-25'); 
+insert into rental_equipment (equipment_number, passport_data_vis, quantity_taken_equipment, time, cost, passport_data_em, date_deal) values ('222', '4644703642', '4', '1', '1800', '9876512045', '2021-12-27'); 
+insert into rental_equipment (equipment_number, passport_data_vis, quantity_taken_equipment, time, cost, passport_data_em, date_deal) values ('223', '7654498442', '1', '2', '300', '7357152475', '2021-01-10'); 
+insert into rental_equipment (equipment_number, passport_data_vis, quantity_taken_equipment, time, cost, passport_data_em, date_deal) values ('331', '8572398195', '3', '1', '1200', '8721723950', '2021-01-30'); 
+insert into rental_equipment (equipment_number, passport_data_vis, quantity_taken_equipment, time, cost, passport_data_em, date_deal) values ('332', '1731191401', '6', '1', '1200', '9376912743', '2021-02-15'); 
+insert into rental_equipment (equipment_number, passport_data_vis, quantity_taken_equipment, time, cost, passport_data_em, date_deal) values ('441', '5064877124', '1', '1', '100', '5481790654', '2021-01-09'); 
+
+
+
+
+
