@@ -1,0 +1,27 @@
+#passport_visitor {
+    -fx-background-color:         -fx-control-inner-background,
+                                  -fx-faint-focus-color,
+                                  linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+     -fx-border-color:  -fx-text-box-border;
+     -fx-border-radius: 3;
+     -fx-background-radius: 3;
+     }
+
+
+#inventar_code {
+    -fx-background-color:         -fx-control-inner-background,
+                                  -fx-faint-focus-color,
+                                  linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+     -fx-border-color:  -fx-text-box-border;
+     -fx-border-radius: 3;
+     -fx-background-radius: 3;
+     }
+
+#passport_sotrud {
+    -fx-background-color:         -fx-control-inner-background,
+                                  -fx-faint-focus-color,
+                                  linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+     -fx-border-color:  -fx-text-box-border;
+     -fx-border-radius: 3;
+     -fx-background-radius: 3;
+     }

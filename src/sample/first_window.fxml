@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -17,11 +18,12 @@
       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="1.0" />
   </columnConstraints>
   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="btn1" alignment="TOP_LEFT" cache="true" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#add_visitor" onMouseEntered="#background" onMouseExited="#background2" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Добавить посетителя" textFill="#2d2d2d" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <Button fx:id="btn1" alignment="TOP_LEFT" cache="true" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#add_visitor" onMouseEntered="#background" onMouseExited="#background2" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Добавить посетителя" textFill="#2d2d2d" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -32,7 +34,7 @@
             <Font name="Arial Black" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btn2" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#redact_visitor" onMouseEntered="#background3" onMouseExited="#background4" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Редактировать&#10;информацию о посетителе" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <Button fx:id="btn2" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#redact_visitor" onMouseEntered="#background3" onMouseExited="#background4" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Редактировать&#10;информацию о посетителе" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <padding>
             <Insets left="20.0" top="60.0" />
          </padding>
@@ -43,7 +45,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button fx:id="btn5" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#make_otchet" onMouseEntered="#background9" onMouseExited="#background10" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Создать отчёт" textAlignment="RIGHT" textFill="#2d2d2d" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <Button fx:id="btn5" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#make_otchet" onMouseEntered="#background9" onMouseExited="#background10" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Создать отчёт" textAlignment="RIGHT" textFill="#2d2d2d" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <padding>
             <Insets left="30.0" top="60.0" />
          </padding>
@@ -51,7 +53,7 @@
             <Font name="Arial Black" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btn4" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#redact_inventar" onMouseEntered="#background7" onMouseExited="#background8" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Редактировать&#10;информацию об инвентаре" textFill="#2d2d2d" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <Button fx:id="btn4" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#redact_inventar" onMouseEntered="#background7" onMouseExited="#background8" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Редактировать&#10;информацию об инвентаре" textFill="#2d2d2d" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <padding>
             <Insets left="20.0" top="60.0" />
          </padding>
@@ -62,7 +64,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Button fx:id="btn3" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#add_inventar" onMouseEntered="#background5" onMouseExited="#background6" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Добавить инвентарь" textAlignment="RIGHT" textFill="#2d2d2d" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <Button fx:id="btn3" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#add_inventar" onMouseEntered="#background5" onMouseExited="#background6" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Добавить инвентарь" textAlignment="RIGHT" textFill="#2d2d2d" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <padding>
             <Insets left="30.0" top="60.0" />
          </padding>
@@ -70,7 +72,7 @@
             <Font name="Arial Black" size="19.0" />
          </font>
       </Button>
-      <Button fx:id="btn6" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#add_prokat" onMouseEntered="#background11" onMouseExited="#background12" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Добавить позицию&#10;в прокат снаряжения" GridPane.columnIndex="2">
+      <Button fx:id="btn6" alignment="TOP_LEFT" contentDisplay="TOP" maxHeight="440.0" maxWidth="440.0" minHeight="250.0" minWidth="250.0" mnemonicParsing="false" onAction="#add_prokat" onMouseEntered="#background11" onMouseExited="#background12" style="-fx-background-color: white; -fx-background-radius: 9; -fx-border-radius: 9;" text="Добавить позицию&#10;в прокат снаряжения" GridPane.columnIndex="2" GridPane.rowIndex="1">
          <padding>
             <Insets left="20.0" top="60.0" />
          </padding>
@@ -81,7 +83,7 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <ImageView mouseTransparent="true" smooth="false">
+      <ImageView mouseTransparent="true" smooth="false" GridPane.rowIndex="1">
          <image>
             <Image url="@sources/addVisitor.png" />
          </image>
@@ -92,7 +94,7 @@
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <ImageView mouseTransparent="true" smooth="false" GridPane.columnIndex="1">
+      <ImageView mouseTransparent="true" smooth="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <image>
             <Image url="@sources/editVisitor.png" />
          </image>
@@ -103,7 +105,7 @@
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <ImageView mouseTransparent="true" smooth="false" GridPane.rowIndex="1">
+      <ImageView mouseTransparent="true" smooth="false" GridPane.rowIndex="2">
          <image>
             <Image url="@sources/seeEquip.png" />
          </image>
@@ -114,7 +116,7 @@
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <ImageView mouseTransparent="true" smooth="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <ImageView mouseTransparent="true" smooth="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <image>
             <Image url="@sources/editEquip.png" />
          </image>
@@ -125,7 +127,7 @@
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <ImageView mouseTransparent="true" smooth="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+      <ImageView mouseTransparent="true" smooth="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <image>
             <Image url="@sources/makeReport.png" />
          </image>
@@ -136,8 +138,21 @@
             <Insets left="160.0" top="130.0" />
          </GridPane.margin>
       </ImageView>
+      <Label fx:id="second_text" text="информационная&#10;&quot;Лыжная база&quot;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Microsoft YaHei Light" size="32.0" />
+         </font>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="first_text" alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Автоматизированная&#10;система" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Microsoft YaHei Light" size="32.0" />
+         </font>
+      </Label>
    </children>
    <padding>
-      <Insets bottom="60.0" left="290.0" right="290.0" top="250.0" />
+      <Insets bottom="60.0" left="290.0" right="290.0" top="100.0" />
    </padding>
 </GridPane>

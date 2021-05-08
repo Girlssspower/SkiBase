@@ -48,7 +48,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="visitors" alignment="TOP_LEFT" maxHeight="600.0" maxWidth="600.0" mnemonicParsing="false" onAction="#otchet_visitors" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: WHITE; -fx-background-radius: 8; -fx-border-radius: 8;" text="О КОЛИЧЕСТВЕ&#10;ПОСЕТИТЕЛЕЙ" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                        <Button fx:id="visitors" alignment="TOP_LEFT" maxHeight="600.0" maxWidth="600.0" mnemonicParsing="false" onAction="#otchet_visitors" onMouseEntered="#button1_is_blue" onMouseExited="#button1_is_white" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: WHITE; -fx-background-radius: 8; -fx-border-radius: 8;" text="О КОЛИЧЕСТВЕ&#10;ПОСЕТИТЕЛЕЙ" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -59,7 +59,7 @@
                               <Font size="24.0" />
                            </font>
                         </Button>
-                        <Button fx:id="money" alignment="TOP_LEFT" maxHeight="600.0" maxWidth="600.0" mnemonicParsing="false" onAction="#otchet_money" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: WHITE; -fx-background-radius: 8; -fx-border-radius: 8;" text="О ДЕНЕЖНЫХ&#10;ПОСТУПЛЕНИЯХ" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                        <Button fx:id="money" alignment="TOP_LEFT" maxHeight="600.0" maxWidth="600.0" mnemonicParsing="false" onAction="#otchet_money" onMouseEntered="#button2_is_blue" onMouseExited="#button2_is_white" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: WHITE; -fx-background-radius: 8; -fx-border-radius: 8;" text="О ДЕНЕЖНЫХ&#10;ПОСТУПЛЕНИЯХ" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -67,7 +67,7 @@
                               <Insets left="30.0" top="30.0" />
                            </padding>
                         </Button>
-                        <Button fx:id="inventar" alignment="TOP_LEFT" maxHeight="600.0" maxWidth="600.0" mnemonicParsing="false" onAction="#otchet_inventar" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: WHITE; -fx-background-radius: 8; -fx-border-radius: 8;" text="ОБ ЭКСПЛУАТИРУЕМОМ&#10;ИНВЕНТАРЕ" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                        <Button fx:id="inventar" alignment="TOP_LEFT" maxHeight="600.0" maxWidth="600.0" mnemonicParsing="false" onAction="#otchet_inventar" onMouseEntered="#button3_is_blue" onMouseExited="#button3_is_white" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: WHITE; -fx-background-radius: 8; -fx-border-radius: 8;" text="ОБ ЭКСПЛУАТИРУЕМОМ&#10;ИНВЕНТАРЕ" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -90,7 +90,7 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <Button fx:id="back_to_main" mnemonicParsing="false" onAction="#go_main" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: #a3c7f8; -fx-border-width: 2; -fx-border-radius: 6;" text="Назад" textFill="#a3c7f8" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+            <Button fx:id="back_to_main" mnemonicParsing="false" onAction="#go_main" onMouseEntered="#enter_white" onMouseExited="#exit_white" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: #a3c7f8; -fx-border-width: 2; -fx-border-radius: 6;" text="Назад" textFill="#a3c7f8" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Raleway-VariableFont_wght" size="18.0" />
                </font>

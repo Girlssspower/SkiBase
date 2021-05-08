@@ -29,7 +29,7 @@
             <Insets bottom="80.0" left="300.0" right="300.0" top="200.0" />
          </GridPane.margin>
          <children>
-            <Button fx:id="back_to_main" mnemonicParsing="false" onAction="#go_main" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: #a3c7f8; -fx-border-width: 2; -fx-border-radius: 6;" text="Назад" textFill="#a3c7f8" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+            <Button fx:id="back_to_main" mnemonicParsing="false" onAction="#go_main" onMouseEntered="#enter_white" onMouseExited="#exite_white" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: #a3c7f8; -fx-border-width: 2; -fx-border-radius: 6;" text="Назад" textFill="#a3c7f8" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <GridPane.margin>
                   <Insets bottom="65.0" right="180.0" />
                </GridPane.margin>
@@ -37,7 +37,7 @@
                   <Font name="Raleway-VariableFont_wght" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="add_new_visitor" mnemonicParsing="false" onAction="#add_new" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #a3c7f8; -fx-background-radius: 6; -fx-background-radius: 6;" text="Добавить" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+            <Button fx:id="add_new_visitor" mnemonicParsing="false" onAction="#add_new" onMouseEntered="#enter_blue" onMouseExited="#exite_blue" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #a3c7f8; -fx-background-radius: 6; -fx-background-radius: 6;" text="Добавить" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <GridPane.margin>
                   <Insets bottom="65.0" left="180.0" />
                </GridPane.margin>
@@ -112,7 +112,7 @@
                         <Font name="Raleway-VariableFont_wght" size="12.0" />
                     </font>
                 </Label>
-                <DatePicker fx:id="date_birth_visitor" maxWidth="380.0" prefHeight="40.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                <DatePicker fx:id="date_birth_visitor" maxWidth="380.0" prefHeight="40.0" prefWidth="300.0" promptText="12.07.1996" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
                 <Label text="Дата рождения" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <GridPane.margin>
                         <Insets left="3.0" right="90.0" top="-55.0" />

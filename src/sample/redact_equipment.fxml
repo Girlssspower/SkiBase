@@ -30,7 +30,7 @@
             <Insets bottom="100.0" left="300.0" right="300.0" top="220.0" />
          </GridPane.margin>
          <children>
-            <Button fx:id="back_to_main" mnemonicParsing="false" onAction="#go_main" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: #a3c7f8; -fx-border-width: 2; -fx-border-radius: 6;" text="Назад" textFill="#a3c7f8" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+            <Button fx:id="back_to_main" mnemonicParsing="false" onAction="#go_main" onMouseEntered="#enter_white" onMouseExited="#exite_white" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: #a3c7f8; -fx-border-width: 2; -fx-border-radius: 6;" text="Назад" textFill="#a3c7f8" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <GridPane.margin>
                   <Insets bottom="70.0" right="180.0" />
                </GridPane.margin>
@@ -38,7 +38,7 @@
                   <Font name="Raleway-VariableFont_wght" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="redact_position" mnemonicParsing="false" onAction="#redact_inventar" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #a3c7f8; -fx-background-radius: 6; -fx-background-radius: 6;" text="Редактировать" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+            <Button fx:id="redact_position" mnemonicParsing="false" onAction="#redact_inventar" onMouseEntered="#enter_blue" onMouseExited="#exite_blue" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #a3c7f8; -fx-background-radius: 6; -fx-background-radius: 6;" text="Редактировать" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <GridPane.margin>
                   <Insets bottom="70.0" left="180.0" />
                </GridPane.margin>
@@ -68,8 +68,8 @@
                </GridPane.margin>
                <children>
                   <TextField fx:id="inventar_code" prefHeight="40.0" prefWidth="250.0" promptText="123" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-                  <TextField fx:id="name_inventar" prefHeight="40.0" prefWidth="250.0" promptText="Лыжные палки" GridPane.rowIndex="1" />
-                  <TextField fx:id="cost_inventar" prefHeight="40.0" prefWidth="250.0" promptText="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="name_inventar" prefHeight="40.0" prefWidth="250.0" GridPane.rowIndex="1" />
+                  <TextField fx:id="cost_inventar" prefHeight="40.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Label text="Код инвентаря" GridPane.valignment="BOTTOM">
                      <GridPane.margin>
                         <Insets />
