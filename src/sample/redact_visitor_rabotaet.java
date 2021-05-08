@@ -36,9 +36,9 @@ public class redact_visitor_rabotaet {
                                         Integer.parseInt(splitDate[2]) - Integer.parseInt(splitGiven[2]) < 0)) {
                             alert.AlertAboutAge();
                         } else {
-            statement.executeUpdate("update visitors set passport_data_vis=" + Integer.parseInt(passport_visitor.getText()) + ", surname_vis='" + surname_visitor.getText()
+            statement.executeUpdate("update visitors set passport_data_vis=" + passport_visitor.getText() + ", surname_vis='" + surname_visitor.getText()
                     + "', name_vis='" + name_visitor.getText() +  "', second_name_vis='" + otchestvo_visitor.getText() + "', birth_date_vis='"+ date_birth_visitor.getValue()
-                    + "', phone_number_vis=" + phone_visitor.getText() + " where passport_data_vis=" + Integer.parseInt(passport_visitor.getText()));
+                    + "', phone_number_vis=" + phone_visitor.getText() + " where passport_data_vis=" + passport_visitor.getText());
             alert.SucsessEdit();
         } } } } }
 
