@@ -30,7 +30,7 @@ public class add_prokat_rabotaet {
                                                             statement.executeUpdate("insert into rental_equipment (" +
                                                                     " equipment_number, passport_data_vis, quantity_taken_equipment," +
                                                                     "time, cost, passport_data_em, date_deal) values ("+ getPrice.equipmentNumber + ", "
-                                                                    + passport_visitor.getSelectionModel().getSelectedItem() + ", "
+                                                                    + Long.parseLong(passport_visitor.getSelectionModel().getSelectedItem())+ ", "
                                                                     + kolvo_inventar.getText().trim() + ", "
                                                                     + kolvo_hours.getText().trim() + ","
                                                                     + sum.getText() + ", "
