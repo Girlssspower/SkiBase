@@ -34,7 +34,7 @@ public class otchety_money {
 
                 Row rowNext=sheet.createRow(sheet.getLastRowNum()+1); //создаём новую строку, прибавляя к индексу последней 1
                 rowNext.createCell(0).setCellValue(String.valueOf(resultSet.getDate(8))); //создаём ячейки
-                rowNext.createCell(1).setCellValue(resultSet.getInt(7));
+                rowNext.createCell(1).setCellValue(resultSet.getLong(6));
 
             }
 
@@ -48,7 +48,7 @@ public class otchety_money {
             exception.printStackTrace();
         }
         Row summaRow =  sheet.createRow(sheet.getLastRowNum()+1);
-        summaRow.createCell(3).setCellValue("Cумма денежных поступлений:");
+        summaRow.createCell(3).setCellValue("Cумма:");
         sheet.autoSizeColumn(sheet.getLastRowNum());
         summaRow.createCell(4).setCellFormula("SUM(B2:B7)");
         String dir="C:\\Отчёты"; //путь к папке
