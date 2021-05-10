@@ -11,7 +11,7 @@ public class alert {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("ФИО может быть введено только по-русски и не быть пустым.");
+        alert.setContentText("ФИО должно быть введено только по-русски и не быть пустым.");
 
         alert.showAndWait();
     }
@@ -20,7 +20,7 @@ public class alert {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("Телефон должен быть введён только 11ю цифрами и не быть пустым.");
+        alert.setContentText("Поле для номера телефона должно содержать 11 цифр и не быть пустым.");
 
         alert.showAndWait();
     }
@@ -29,7 +29,7 @@ public class alert {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("Паспортные данные должены быть введёны только 10ю цифрами и не быть пустыми.");
+        alert.setContentText("Поле для паспортных данных должно содержать 10 цифр и не быть пустым.");
 
         alert.showAndWait();
     }
@@ -55,7 +55,7 @@ public class alert {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("Такой паспорт уже есть в базе данных.");
+        alert.setContentText("Такой номер паспорта уже есть в базе данных.");
 
         alert.showAndWait();
     }
@@ -72,7 +72,7 @@ public class alert {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("Код инвентаря может содержать только цифры и не должен быть пустым.");
+        alert.setContentText("Код инвентаря должен содержать только цифры и не быть пустым.");
 
         alert.showAndWait();
     }
@@ -81,7 +81,7 @@ public class alert {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("Наименование инвентаря может быть не больше 20ти символов и не должно быть пустым.");
+        alert.setContentText("Наименование инвентаря должно быть не больше 20 символов и не быть пустым.");
 
         alert.showAndWait();
     }
@@ -159,7 +159,7 @@ public class alert {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("Выберите паспортные данные работника.");
+        alert.setContentText("Выберите паспортные данные сотрудника.");
 
         alert.showAndWait();
     }
@@ -175,7 +175,7 @@ public class alert {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("Отчёт о инвентаре готов в C:/Отчёты/Эксплутируемый инвентарь.xsl");
+        alert.setContentText("Отчёт об эксплуатируемом инвентаре готов в C:/Отчёты/Эксплутируемый инвентарь.xsl");
 
         alert.showAndWait();
     }
@@ -183,7 +183,7 @@ public class alert {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("Отчёт о инвентаре готов в C:/Отчёты/Денежные поступления.xsl");
+        alert.setContentText("Отчёт о денежных поступлениях готов в C:/Отчёты/Денежные поступления.xsl");
 
         alert.showAndWait();
     }
@@ -191,7 +191,7 @@ public class alert {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Сообщение");
         alert.setHeaderText(null);
-        alert.setContentText("Отчёт о инвентаре готов в C:/Отчёты/Количество посетителей.xsl");
+        alert.setContentText("Отчёт о количестве посетителей готов в C:/Отчёты/Количество посетителей.xsl");
 
         alert.showAndWait();
     }
