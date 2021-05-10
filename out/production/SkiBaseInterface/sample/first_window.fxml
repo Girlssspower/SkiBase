@@ -151,6 +151,17 @@
             <Font name="Microsoft YaHei Light" size="32.0" />
          </font>
       </Label>
+      <ImageView mouseTransparent="true" smooth="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <image>
+            <Image url="@sources/RentEquip.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <GridPane.margin>
+            <Insets left="160.0" top="130.0" />
+         </GridPane.margin>
+      </ImageView>
    </children>
    <padding>
       <Insets bottom="60.0" left="290.0" right="290.0" top="100.0" />
