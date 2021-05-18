@@ -17,7 +17,7 @@ public class Main extends Application {
         Font font = Font.loadFont("sources/Raleway-VariableFont_wght.ttf", 45);
         primaryStage.setTitle("Главная страница");
         primaryStage.setResizable(true);
-        primaryStage.setScene(new Scene(root, 1600, 900));
+        primaryStage.setScene(new Scene(root, 1366, 768));
         primaryStage.show();
     }
 

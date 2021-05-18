@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #a9ceff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.add_visitorController">
+<GridPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #a9ceff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.add_visitorController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     </columnConstraints>
@@ -26,12 +26,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
          <GridPane.margin>
-            <Insets bottom="80.0" left="300.0" right="300.0" top="200.0" />
+            <Insets bottom="120.0" left="200.0" right="200.0" top="120.0" />
          </GridPane.margin>
          <children>
             <Button fx:id="back_to_main" mnemonicParsing="false" onAction="#go_main" onMouseEntered="#enter_white" onMouseExited="#exite_white" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-color: #a3c7f8; -fx-border-width: 2; -fx-border-radius: 6;" text="Назад" textFill="#a3c7f8" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <GridPane.margin>
-                  <Insets bottom="65.0" right="180.0" />
+                  <Insets bottom="50.0" right="180.0" />
                </GridPane.margin>
                <font>
                   <Font name="Raleway-VariableFont_wght" size="18.0" />
@@ -39,7 +39,7 @@
             </Button>
             <Button fx:id="add_new_visitor" mnemonicParsing="false" onAction="#add_new" onMouseEntered="#enter_blue" onMouseExited="#exite_blue" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #a3c7f8; -fx-background-radius: 6; -fx-background-radius: 6;" text="Добавить" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
                <GridPane.margin>
-                  <Insets bottom="65.0" left="180.0" />
+                  <Insets bottom="50.0" left="180.0" />
                </GridPane.margin>
                <font>
                   <Font name="Raleway-VariableFont_wght" size="18.0" />
@@ -47,7 +47,7 @@
             </Button>
             <Label alignment="TOP_LEFT" text="РЕГИСТРАЦИЯ ПОСЕТИТЕЛЯ" textFill="#a3c7f8" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets left="110.0" top="85.0" />
+                  <Insets left="105.0" top="75.0" />
                </GridPane.margin>
                <font>
                   <Font size="36.0" />
@@ -67,7 +67,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <GridPane.margin>
-                <Insets bottom="220.0" left="400.0" right="400.0" top="350.0" />
+                <Insets bottom="250.0" left="300.0" right="300.0" top="250.0" />
             </GridPane.margin>
             <children>
                 <TextField fx:id="passport_visitor" accessibleText="" prefHeight="40.0" prefWidth="250.0" promptText="2816765432" GridPane.valignment="BOTTOM" />
@@ -123,7 +123,7 @@
                 </Label>
             </children>
             <padding>
-                <Insets bottom="80.0" left="30.0" right="30.0" top="50.0" />
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
             </padding>
         </GridPane>
     </children>

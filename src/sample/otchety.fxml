@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #a9ceff; -fx-border-radius: 8;" vgap="20.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.otchetyController">
+<GridPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #a9ceff; -fx-border-radius: 8;" vgap="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.otchetyController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -24,7 +24,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <GridPane.margin>
-            <Insets bottom="150.0" left="200.0" right="200.0" top="150.0" />
+            <Insets bottom="100.0" left="90.0" right="90.0" top="100.0" />
          </GridPane.margin>
          <children>
             <GridPane style="-fx-background-color: #e6e6e6; -fx-background-radius: 8; -fx-border-radius: 8;">
@@ -35,7 +35,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <GridPane.margin>
-                  <Insets bottom="100.0" left="70.0" right="70.0" top="150.0" />
+                  <Insets bottom="120.0" left="70.0" right="70.0" top="130.0" />
                </GridPane.margin>
                <children>
                   <GridPane alignment="BOTTOM_CENTER" hgap="20.0">
@@ -53,27 +53,36 @@
                               <Insets />
                            </opaqueInsets>
                            <padding>
-                              <Insets left="30.0" top="30.0" />
+                              <Insets left="20.0" top="30.0" />
                            </padding>
                            <font>
                               <Font size="24.0" />
                            </font>
+                           <GridPane.margin>
+                              <Insets top="-20.0" />
+                           </GridPane.margin>
                         </Button>
                         <Button fx:id="money" alignment="TOP_LEFT" maxHeight="600.0" maxWidth="600.0" mnemonicParsing="false" onAction="#otchet_money" onMouseEntered="#button2_is_blue" onMouseExited="#button2_is_white" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: WHITE; -fx-background-radius: 8; -fx-border-radius: 8;" text="О ДЕНЕЖНЫХ&#10;ПОСТУПЛЕНИЯХ" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                            <font>
                               <Font size="24.0" />
                            </font>
                            <padding>
-                              <Insets left="30.0" top="30.0" />
+                              <Insets left="20.0" top="30.0" />
                            </padding>
+                           <GridPane.margin>
+                              <Insets top="-20.0" />
+                           </GridPane.margin>
                         </Button>
                         <Button fx:id="inventar" alignment="TOP_LEFT" maxHeight="600.0" maxWidth="600.0" mnemonicParsing="false" onAction="#otchet_inventar" onMouseEntered="#button3_is_blue" onMouseExited="#button3_is_white" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: WHITE; -fx-background-radius: 8; -fx-border-radius: 8;" text="ОБ ЭКСПЛУАТИРУЕМОМ&#10;ИНВЕНТАРЕ" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                            <font>
                               <Font size="24.0" />
                            </font>
                            <padding>
-                              <Insets left="30.0" top="30.0" />
+                              <Insets left="20.0" top="30.0" />
                            </padding>
+                           <GridPane.margin>
+                              <Insets top="-20.0" />
+                           </GridPane.margin>
                         </Button>
                      </children>
                      <GridPane.margin>
@@ -84,7 +93,7 @@
             </GridPane>
             <Label alignment="TOP_LEFT" text="СОЗДАТЬ ОТЧЁТЫ" textFill="#a3c7f8" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets left="80.0" top="90.0" />
+                  <Insets left="80.0" top="75.0" />
                </GridPane.margin>
                <font>
                   <Font size="36.0" />
@@ -95,7 +104,7 @@
                   <Font name="Raleway-VariableFont_wght" size="18.0" />
                </font>
                <GridPane.margin>
-                  <Insets bottom="30.0" />
+                  <Insets bottom="40.0" />
                </GridPane.margin>
             </Button>
          </children>
